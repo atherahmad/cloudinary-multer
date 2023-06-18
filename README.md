@@ -1,0 +1,13 @@
+### Cloudinary
+- It is a cloud service to store images and videos
+- To use it we need to register our self on Cloudinary by visiting `https://cloudinary.com/`
+- Select signup for free
+- You can sign up with your github or google account / or with your email
+- After sigining up with google it will ask about your role, please choose the Developer
+- You will be routed to Getting started page
+- Where you can select node.js and can see the command to run for installation `npm install cloudinary`
+- Configs will be also available there , you can copy that.
+- After navigating to the Dashboard you can see the product environment. Here you can find your cloud name , API Key and API secret , that you can view and copy.
+- API Enviroment variable provides you the cloundinary_url
+- We can change the cloud name by navigating to account from settings
+-  Then in product environment cloud name you can rename it.
