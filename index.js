@@ -14,7 +14,7 @@ const publicFolder = path.join(__dirname, "/images")
 console.log(publicFolder)
 */
 
-const publicFolder = path.resolve()+'/images'
+const publicFolder = path.resolve()+'/new-client/build'
 
 dotenv.config()
 
@@ -29,10 +29,10 @@ app.use(express.static(publicFolder))
 app.use('/api/users', userRouter)
 app.use('/api/posts', postRouter)
 app.use('/api/auth', authRouter)
-app.use('/', (req, res) => {
-    res.send("Reached Backend Server")
+app.get('/', (req, res) => {
+    res.sendFile(path.join(publicFolder, 'index.html'))
 })
-app.use('*', (req, res) => {
+app.all('*', (req, res) => {
     res.send("Page Not Found")
 })
 
