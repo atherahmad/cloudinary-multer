@@ -58,7 +58,7 @@ function Gallery(props) {
       </form>
       {images.map((img) => (
         <div style={{margin:5, border: '2px green solid'}}>
-            <img src={`${process.env.REACT_APP_BE_URL}/${img}`} height={200} width={200} />
+            <img src={`${process.env.REACT_APP_BE_URL}/images/${img}`} height={200} width={200} />
         </div>
       ))}
 

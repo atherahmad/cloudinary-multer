@@ -5,16 +5,16 @@ import connectDB from "./config/db.js"
 import userRouter from './routes/UserRoutes.js'
 import postRouter from './routes/PostRoutes.js'
 import authRouter from './routes/AuthRoutes.js'
-/* import {fileURLToPath} from 'url' */
+import {fileURLToPath} from 'url'
 
 import path,{dirname} from 'path'
 
-/* const __dirname = dirname(fileURLToPath(import.meta.url))
-const publicFolder = path.join(__dirname, "/images") 
+const __dirname = dirname(fileURLToPath(import.meta.url))
+const publicFolder = path.join(__dirname, "/build") 
 console.log(publicFolder)
-*/
 
-const publicFolder = path.resolve()+'/new-client/build'
+
+/* const publicFolder = path.resolve()+'public/' */
 
 dotenv.config()
 

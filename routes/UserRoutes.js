@@ -3,12 +3,12 @@ import {getAllUsers, singleUserDetails, createUser, updateUser , getGallery , up
 import { authorizationHandler } from "../middleware/authorization.js"
 
 import multer from 'multer'
-const upload = multer({dest: 'images/'})
+const upload = multer({dest: 'build/images/'})
 
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
-      cb(null, 'images')
+      cb(null, 'build/images/')
     },
     filename: function (req, file, cb) {
       const extName = file.mimetype.split('/')[1]
