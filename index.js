@@ -29,12 +29,10 @@ app.use(express.static(publicFolder))
 app.use('/api/users', userRouter)
 app.use('/api/posts', postRouter)
 app.use('/api/auth', authRouter)
-app.get('/', (req, res) => {
+app.get('*', (req, res) => {
     res.sendFile(path.join(publicFolder, 'index.html'))
 })
-app.all('*', (req, res) => {
-    res.send("Page Not Found")
-})
+
 
 connectDB()
 app.use((error, req, res, next)=>{
