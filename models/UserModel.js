@@ -102,7 +102,7 @@ try{
 })
 
 userSchema.post("findOne", async function(doc, next){
-   console.log('post called after making findOne query')
+
 })
 
 export default mongoose.model('User', userSchema, 'User')
